@@ -1,0 +1,9 @@
+-- |Tab1| |KraSus Zet| |Suslik Hub| |Krutoy Suslik|
+
+local tabbut1 = Instance.new("TextButton")
+tabbut1.Size = UDim2.new(0, 50, 0, 50)
+tabbut1.Position = UDim2.new(0.5, 30, 0.5, -60) 
+tabbut1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tabbut1.Text = "Tab1"
+tabbut1.Parent = Gui1o
+tabbut1.Visible = false
