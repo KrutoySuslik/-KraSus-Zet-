@@ -5,4 +5,15 @@ tabbut1.Size = UDim2.new(0, 50, 0, 50)
 tabbut1.Position = UDim2.new(0.5, 30, 0.5, -60) 
 tabbut1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 tabbut1.Text = "Tab1"
-tabbut1.Parent = Gui1o
+
+local function setParentForGui1o(parent)
+    for _, child in pairs(parent:GetChildren()) do
+        if child.Name == "Gui1o" then
+            tabbut1.Parent = child
+            print("Установлен родительский элемент для tabbut1:", child:GetFullName())
+        end
+        setParentForGui1o(child)
+    end
+end
+
+setParentForGui1o(game)
